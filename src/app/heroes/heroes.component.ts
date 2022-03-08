@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import type { Hero } from '../heto';
 
 @Component({
   // Component es un decorador que especifica los metadatos de Angular para el componente.
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./heroes.component.scss'],
 })
 export class HeroesComponent implements OnInit {
-  hero = 'Windstorm';
+  // hero = 'Windstorm';
+  hero: Hero = { id: 1, name: 'Windstorm' };
 
   constructor() {}
 
