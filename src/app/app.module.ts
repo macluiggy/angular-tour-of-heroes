@@ -26,7 +26,7 @@ import { InMemoryDataService } from './in-memory-data.service';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
-    }), // 1er argumento: prepara la base de datos en memoria, 2do argumento: configuraciones
+    }), // 1er argumento: prepara la base de datos en memoria, 2do argumento: configuraciones, de aqui se establece la base url api
   ],
   providers: [],
   bootstrap: [AppComponent],
