@@ -13,17 +13,17 @@ import { MessageService } from '../message.service';
 export class HeroesComponent implements OnInit {
   // hero = 'Windstorm';
   heroes: Hero[] = [];
-  selectedHero?: Hero;
+  // selectedHero?: Hero;
 
   constructor(
     private heroService: HeroService,
-    private messageService: MessageService
+    // private messageService: MessageService
   ) {}
 
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
-  }
+  // onSelect(hero: Hero): void {
+  //   this.selectedHero = hero;
+  //   this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
+  // }
 
   gerHeroes(): void {
     this.heroService.getHerores().subscribe((heroes) => (this.heroes = heroes));
