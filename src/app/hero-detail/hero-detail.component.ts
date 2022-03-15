@@ -26,4 +26,8 @@ export class HeroDetailComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id')); // convierte el string a un numero. este get siempre devuelve un string, por lo que hay que convertirlo a un numero ya que ese es el tipo de dato que se espera
     this.heroService.getHero(id).subscribe((hero) => (this.hero = hero));
   }
+
+  goBack(): void {
+    this.location.back();
+  }
 }
